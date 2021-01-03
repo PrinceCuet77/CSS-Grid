@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            background: wheat;
+            width: 80%;
+            /* height: 400px; */
+            margin: 50px auto 0;
+
+            display: grid;
+            grid-template-columns: fit-content(200px) fit-content(300px) 1fr; /* fit-content works like max-width */
+            grid-template-rows: repeat(2, minmax(100px, min-content));
+
+            grid-auto-rows: 80px;
+        }
+
+        .item1 {
+            background: orangered;
+        }
+
+        .item2 {
+            background: yellowgreen;
+        }
+
+        .item3 {
+            background: slateblue;
+        }
+
+        .item4 {
+            background: hotpink;
+        }
+
+        .item5 {
+            background: royalblue;
+        }
+
+        .item6 {
+            background: pink;
+        }
+
+        .item7 {
+            background: goldenrod;
+        }
+
+        .item8 {
+            background: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>fit content</h1>
+    <div class="container">
+        <div class="item1">One Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam delectus labore commodi nostrum possimus aliquid voluptatum rem exercitationem porro quaerat?</div>
+        <div class="item2">Two Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, dolorem!</div>
+        <div class="item3">Three</div>
+        <div class="item4">Four</div>
+        <div class="item5">Five</div>
+        <div class="item6">Six</div>
+    </div> 
+</body>
+
+</html>

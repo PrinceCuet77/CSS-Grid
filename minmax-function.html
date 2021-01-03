@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            background: wheat;
+            width: 700px;
+            /* height: 400px; */
+            margin: 45px auto 0;
+
+            display: grid;
+            grid-template-columns: minmax(150px, min-content) 1fr 1fr min-content;
+            grid-template-rows: repeat(2, minmax(150px, min-content));
+            grid-gap: 5px;
+
+            /* 
+            minmax(min, max) - if I used in columns then min or max height otherwise min or max width
+            min-content - minimum width/height for existing content
+            max-content - maximum width/height for existing content
+             */
+        }
+
+        .item1 {
+            background: orangered;
+        }
+
+        .item2 {
+            background: yellowgreen;
+        }
+
+        .item3 {
+            background: slateblue;
+        }
+
+        .item4 {
+            background: hotpink;
+        }
+
+        .item5 {
+            background: royalblue;
+        }
+
+        .item6 {
+            background: pink;
+        }
+
+        .item7 {
+            background: goldenrod;
+        }
+
+        .item8 {
+            background: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>minmax() function</h1>
+    <div class="container">
+        <div class="item1">One Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+        <div class="item2">Two</div>
+        <div class="item3">Three</div>
+        <div class="item4">Four</div>
+        <div class="item5">Five</div>
+        <div class="item6">Six</div>
+        <div class="item7">Seven</div>
+        <div class="item8">Eight</div>
+    </div>
+</body>
+
+</html>
